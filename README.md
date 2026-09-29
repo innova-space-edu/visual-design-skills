@@ -2,9 +2,9 @@
 
 General-purpose visual intelligence skills, local-first Web SDK, provider executors, and a standalone integration demo.
 
-## v1.4
+## v1.5
 
-The repo can now test the complete path before EDUAI:
+The runtime compiles compact guidance from only the selected specialist skills. The package builds this index from the SKILL.md files during installation, so prompts get domain-specific rules without injecting all skills.\n\nThe repo can now test the complete path before EDUAI:
 
 ```text
 prompt

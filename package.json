@@ -1,6 +1,6 @@
 {
   "name": "@innova-space/visual-design",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Local-first visual design routing, planning, provider execution and modular AI design skills.",
   "license": "MIT",
   "type": "module",
@@ -54,7 +54,10 @@
     "test:providers": "node scripts/test-providers.mjs",
     "check:browser": "node scripts/check-browser-safe.mjs",
     "benchmark:router": "node scripts/benchmark-router.mjs",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "build:skill-guidance": "node scripts/build-skill-guidance.mjs",
+    "prepare": "npm run build:skill-guidance",
+    "test:skill-guidance": "node scripts/test-skill-guidance.mjs"
   },
   "keywords": [
     "ai",

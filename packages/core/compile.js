@@ -1,3 +1,4 @@
+import { compactSkillGuidance, getSkillGuidance } from "./skill-guidance.js";
 function compact(value) {
   return value && Object.keys(value).length ? JSON.stringify(value) : "";
 }
@@ -22,14 +23,19 @@ function promptParts(brief) {
 
 export function compileBackendRequest(brief, backend) {
   if (!backend) throw new Error("backend is required");
-  const prompt = promptParts(brief).join(". ");
+  const mode = ["svg","maplibre","vega-lite"].includes(backend) ? "deterministic" : "generative";
+  const skillGuidance = getSkillGuidance(brief.selected_skills ?? [], { mode });
+  const specialist = compactSkillGuidance(brief.selected_skills ?? [], { mode });
+  const basePrompt = promptParts(brief).join(". ");
+  const prompt = specialist ? basePrompt + ". SPECIALIST GUIDANCE:\n" + specialist : basePrompt;
 
   if (["svg","maplibre","vega-lite"].includes(backend)) {
     return {
       backend,
       mode:"deterministic",
       instruction:"Preserve authoritative values, geometry, coordinates, formulas, and exact text. Do not replace them with free-form image generation.",
-      visual_brief:brief
+      visual_brief:brief,
+      skill_guidance:skillGuidance
     };
   }
 
@@ -37,6 +43,7 @@ export function compileBackendRequest(brief, backend) {
     backend,
     mode: backend === "comfyui" ? "workflow" : backend === "recraft" ? "vector-or-generative" : "generative",
     prompt,
+    skill_guidance:skillGuidance,
     preserve:brief.preserve ?? [],
     references:brief.references ?? []
   };
