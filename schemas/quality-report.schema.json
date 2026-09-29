@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VisualQualityReport",
+  "type": "object",
+  "required": [
+    "scores",
+    "failures",
+    "repair_required"
+  ],
+  "properties": {
+    "scores": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "criterion",
+          "severity",
+          "description"
+        ],
+        "properties": {
+          "criterion": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "info",
+              "minor",
+              "major",
+              "critical"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "repair": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "repair_required": {
+      "type": "boolean"
+    },
+    "repair_instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

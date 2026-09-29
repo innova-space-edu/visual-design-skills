@@ -1,0 +1,9 @@
+{
+  "name": "visual-design-skills",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-registry.mjs"
+  }
+}

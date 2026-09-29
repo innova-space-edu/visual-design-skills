@@ -1,0 +1,124 @@
+{
+  "skill_name": "visual-design-router",
+  "evals": [
+    {
+      "id": "math-homothety",
+      "prompt": "Crea una imagen educativa de homotecia de un triángulo con k=-2,-0.5,0.5,2 y líneas de proyección.",
+      "expectations": [
+        "select math-diagram",
+        "deterministic geometry",
+        "labels remain legible",
+        "do not use diffusion as geometry authority"
+      ]
+    },
+    {
+      "id": "real-map",
+      "prompt": "Mapa real de Antofagasta con cinco ubicaciones dadas por coordenadas.",
+      "expectations": [
+        "select map-design",
+        "deterministic",
+        "MapLibre/GeoJSON compatible",
+        "coordinates authoritative"
+      ]
+    },
+    {
+      "id": "selfie-identity",
+      "prompt": "Convierte esta foto en una selfie nocturna manteniendo exactamente el rostro.",
+      "expectations": [
+        "select selfie",
+        "select face-identity",
+        "select image-edit",
+        "generative with identity preservation"
+      ]
+    },
+    {
+      "id": "poster",
+      "prompt": "Diseña un afiche vertical con el texto exacto FERIA CIENTÍFICA 2026 y una imagen espacial.",
+      "expectations": [
+        "poster-design",
+        "typography-design",
+        "hybrid",
+        "exact text validation"
+      ]
+    },
+    {
+      "id": "floorplan",
+      "prompt": "Plano de sala 3.8m x 8m con segundo nivel a 2.3m y muebles bajo plataforma.",
+      "expectations": [
+        "technical-floorplan when dimensions authoritative",
+        "deterministic dimensions",
+        "no silent dimension changes"
+      ]
+    },
+    {
+      "id": "infographic",
+      "prompt": "Infografía con resultados de una encuesta y gráfico de barras con estos datos.",
+      "expectations": [
+        "infographic",
+        "data-visualization",
+        "Vega-Lite or deterministic chart",
+        "no invented values"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "prompt": "Guía visual con ecuación 2H2 + O2 → 2H2O y diagrama de partículas.",
+      "expectations": [
+        "chemistry-diagram",
+        "exact equation",
+        "hybrid or deterministic",
+        "text/formula validation"
+      ]
+    },
+    {
+      "id": "logo",
+      "prompt": "Diseña un logo editable para un proyecto educativo.",
+      "expectations": [
+        "logo-design",
+        "vector-first",
+        "SVG/Recraft class backend",
+        "monochrome validation"
+      ]
+    },
+    {
+      "id": "notebook",
+      "prompt": "Crea una hoja de cuaderno cuadriculado con fórmulas de cinemática y anotaciones.",
+      "expectations": [
+        "notebook-page",
+        "deterministic academic text",
+        "grid layout",
+        "formula validation"
+      ]
+    },
+    {
+      "id": "comic",
+      "prompt": "Haz una historieta de cuatro viñetas con el mismo personaje y diálogos exactos.",
+      "expectations": [
+        "comic",
+        "character-consistency",
+        "deterministic dialogue typesetting",
+        "sequential continuity"
+      ]
+    },
+    {
+      "id": "product",
+      "prompt": "Crea fotografía comercial del producto manteniendo exactamente su forma y etiqueta.",
+      "expectations": [
+        "product-photo",
+        "multi-reference if supplied",
+        "product geometry preserved",
+        "label validation"
+      ]
+    },
+    {
+      "id": "biology",
+      "prompt": "Diagrama del ojo humano con partes etiquetadas para enseñanza media.",
+      "expectations": [
+        "biology-diagram",
+        "educational-image",
+        "hybrid",
+        "authoritative labels outside generative layer"
+      ]
+    }
+  ]
+}
