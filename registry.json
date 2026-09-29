@@ -1,0 +1,323 @@
+{
+  "version": "1.0.0",
+  "suite": "visual-design-skills",
+  "description": "Specialist visual intelligence skills with deterministic, hybrid, and generative routing.",
+  "core": [
+    "visual-design-router",
+    "visual-prompt-compiler",
+    "visual-quality-control"
+  ],
+  "skills": [
+    {
+      "name": "visual-design-router",
+      "path": "skills/visual-design-router/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "router"
+    },
+    {
+      "name": "visual-prompt-compiler",
+      "path": "skills/visual-prompt-compiler/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "compiler"
+    },
+    {
+      "name": "visual-quality-control",
+      "path": "skills/visual-quality-control/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "validator"
+    },
+    {
+      "name": "image-edit",
+      "path": "skills/image-edit/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "edit"
+    },
+    {
+      "name": "multi-reference",
+      "path": "skills/multi-reference/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "style-consistency",
+      "path": "skills/style-consistency/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "character-consistency",
+      "path": "skills/character-consistency/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "pose-control",
+      "path": "skills/pose-control/SKILL.md",
+      "category": "core",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "portrait",
+      "path": "skills/portrait/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "face-identity",
+      "path": "skills/face-identity/SKILL.md",
+      "category": "identity",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "selfie",
+      "path": "skills/selfie/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "photorealism",
+      "path": "skills/photorealism/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "editorial-photo",
+      "path": "skills/editorial-photo/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "product-photo",
+      "path": "skills/product-photo/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "landscape",
+      "path": "skills/landscape/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "architecture-render",
+      "path": "skills/architecture-render/SKILL.md",
+      "category": "architecture",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "interior-design",
+      "path": "skills/interior-design/SKILL.md",
+      "category": "architecture",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "group-photo",
+      "path": "skills/group-photo/SKILL.md",
+      "category": "photography",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "graphic-design",
+      "path": "skills/graphic-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "poster-design",
+      "path": "skills/poster-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "social-media-design",
+      "path": "skills/social-media-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "cover-design",
+      "path": "skills/cover-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "branding",
+      "path": "skills/branding/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "logo-design",
+      "path": "skills/logo-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "icon-design",
+      "path": "skills/icon-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "vector-illustration",
+      "path": "skills/vector-illustration/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "packaging-design",
+      "path": "skills/packaging-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "typography-design",
+      "path": "skills/typography-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "infographic",
+      "path": "skills/infographic/SKILL.md",
+      "category": "structured visual",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "educational-image",
+      "path": "skills/educational-image/SKILL.md",
+      "category": "education",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "science-illustration",
+      "path": "skills/science-illustration/SKILL.md",
+      "category": "education/science",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "math-diagram",
+      "path": "skills/math-diagram/SKILL.md",
+      "category": "education/math",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "physics-diagram",
+      "path": "skills/physics-diagram/SKILL.md",
+      "category": "education/physics",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "chemistry-diagram",
+      "path": "skills/chemistry-diagram/SKILL.md",
+      "category": "education/chemistry",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "biology-diagram",
+      "path": "skills/biology-diagram/SKILL.md",
+      "category": "education/biology",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "data-visualization",
+      "path": "skills/data-visualization/SKILL.md",
+      "category": "data",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "map-design",
+      "path": "skills/map-design/SKILL.md",
+      "category": "geospatial",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "stylized-map",
+      "path": "skills/stylized-map/SKILL.md",
+      "category": "geospatial/art",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "floorplan-concept",
+      "path": "skills/floorplan-concept/SKILL.md",
+      "category": "architecture",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "technical-floorplan",
+      "path": "skills/technical-floorplan/SKILL.md",
+      "category": "architecture/technical",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "technical-drawing",
+      "path": "skills/technical-drawing/SKILL.md",
+      "category": "technical",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "notebook-page",
+      "path": "skills/notebook-page/SKILL.md",
+      "category": "editorial/education",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "worksheet-design",
+      "path": "skills/worksheet-design/SKILL.md",
+      "category": "education/editorial",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "textbook-page",
+      "path": "skills/textbook-page/SKILL.md",
+      "category": "education/editorial",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "cartoon",
+      "path": "skills/cartoon/SKILL.md",
+      "category": "illustration",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "comic",
+      "path": "skills/comic/SKILL.md",
+      "category": "illustration",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "anime-general",
+      "path": "skills/anime-general/SKILL.md",
+      "category": "illustration",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "childrens-illustration",
+      "path": "skills/childrens-illustration/SKILL.md",
+      "category": "illustration",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "pixel-art",
+      "path": "skills/pixel-art/SKILL.md",
+      "category": "illustration",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "3d-render",
+      "path": "skills/3d-render/SKILL.md",
+      "category": "3d",
+      "default_render_strategy": "generative"
+    }
+  ],
+  "backend_profiles": [
+    "openai",
+    "flux",
+    "qwen-image",
+    "ideogram",
+    "recraft",
+    "comfyui",
+    "svg",
+    "maplibre",
+    "vega-lite"
+  ]
+}

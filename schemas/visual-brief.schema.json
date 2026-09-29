@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://innova-space-edu.github.io/visual-design-skills/schemas/visual-brief.schema.json",
+  "title": "VisualBrief",
+  "type": "object",
+  "required": [
+    "purpose",
+    "visual_type",
+    "render_strategy",
+    "composition",
+    "output"
+  ],
+  "properties": {
+    "purpose": {
+      "type": "string"
+    },
+    "visual_type": {
+      "type": "string"
+    },
+    "domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subdomain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "audience": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "default": "auto"
+    },
+    "render_strategy": {
+      "enum": [
+        "deterministic",
+        "hybrid",
+        "generative"
+      ]
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "lighting": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "palette": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "typography": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "text_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preserve": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "selected_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preferred_backends": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fallback_backends": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": [
+        "format"
+      ],
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "aspect_ratio": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "editable": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
