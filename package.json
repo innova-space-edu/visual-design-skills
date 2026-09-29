@@ -1,6 +1,6 @@
 {
   "name": "@innova-space/visual-design",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Local-first visual design routing, planning, provider execution and modular AI design skills.",
   "license": "MIT",
   "type": "module",

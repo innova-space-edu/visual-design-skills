@@ -41,3 +41,36 @@ export interface VisualDesign {
 }
 export declare function createVisualDesign(config?:Record<string,unknown>): VisualDesign;
 export declare const visual: VisualDesign;
+
+export interface SkillGuidance {
+  skill: string;
+  description: string;
+  rules: string[];
+  qa: string[];
+}
+export declare const SKILL_GUIDANCE: Readonly<Record<string, {
+  category?: string;
+  strategy?: string;
+  description?: string;
+  triggers?: string[];
+  rules?: string[];
+  qa?: string[];
+}>>;
+export declare function getSkillGuidance(
+  skillNames?: string[],
+  options?: {
+    maxSkills?: number;
+    maxRulesPerSkill?: number;
+    maxQaPerSkill?: number;
+    mode?: "generative" | "deterministic";
+  }
+): SkillGuidance[];
+export declare function compactSkillGuidance(
+  skillNames?: string[],
+  options?: {
+    maxSkills?: number;
+    maxRulesPerSkill?: number;
+    maxQaPerSkill?: number;
+    mode?: "generative" | "deterministic";
+  }
+): string;
