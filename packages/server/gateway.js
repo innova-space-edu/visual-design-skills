@@ -1,5 +1,5 @@
 import { createVisualDesign } from "../sdk/index.js";
-import { createCacheKey } from "../core/index.js";
+import { createCacheKey, compileBackendRequest } from "../core/index.js";
 
 function json(data, status = 200, headers = {}) {
   return new Response(JSON.stringify(data), {
@@ -22,7 +22,11 @@ function corsHeaders(request, cors) {
 
 function executionRequests(plan, backend) {
   const requests = plan?.requests ?? [];
-  return backend ? requests.filter(x => x.backend === backend) : requests;
+  if (!backend) return requests;
+  const matches = requests.filter(x => x.backend === backend);
+  if (matches.length) return matches;
+  if (!plan?.visual_brief) return [];
+  return [compileBackendRequest(plan.visual_brief, backend)];
 }
 
 function cacheable(plan) {
