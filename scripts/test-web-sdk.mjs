@@ -39,16 +39,25 @@ const cached2 = await browser.planCached("mapa real con coordenadas");
 assert.equal(cached1.cache_hit, false);
 assert.equal(cached2.cache_hit, true);
 
-const gateway = createVisualGateway();
+const calls = [];
+const gateway = createVisualGateway({
+  executors:{
+    openai: async ({request}) => { calls.push(request); return {kind:"image",provider:"test-openai"}; }
+  }
+});
+const planForOverride = visual.plan('Diseña un logo editable para "TEST"');
+assert.equal(planForOverride.backend.primary, "svg");
 const response = await gateway.handleRequest(new Request("https://example.test/api/visual", {
   method:"POST",
   headers:{"content-type":"application/json"},
-  body:JSON.stringify({action:"plan", input:"logo educativo editable"})
+  body:JSON.stringify({action:"execute", plan:planForOverride, backend:"openai"})
 }));
 assert.equal(response.status, 200);
 const body = await response.json();
 assert.equal(body.ok, true);
-assert.equal(body.plan.cost.planning_external_calls, 0);
+assert.equal(body.outputs[0].backend, "openai");
+assert.equal(calls[0].backend, "openai");
+assert.ok(calls[0].prompt.includes("TEST"));
 
 const handlers = createNextRouteHandlers(gateway);
 assert.equal(typeof handlers.POST, "function");
