@@ -5,4 +5,5 @@ export { createVisualBrief, mergeBrief } from "./brief.js";
 export { validateVisualBrief } from "./validate.js";
 export { selectBackend } from "./select-backend.js";
 export { compileBackendRequest } from "./compile.js";
+export { SKILL_GUIDANCE, getSkillGuidance, compactSkillGuidance } from "./skill-guidance.js";
 export { planVisual, planVisualAsync } from "./planner.js";

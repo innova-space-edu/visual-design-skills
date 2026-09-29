@@ -14,6 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - run: npm run build:skill-guidance
       - run: npm run validate
       - run: npm run route -- "mapa real con coordenadas y cinco ubicaciones"
       - run: npm run validate:brief -- examples/poster.json
@@ -22,6 +23,7 @@ jobs:
       - run: npm run compile -- svg examples/technical-floorplan.json
       - run: npm run check:browser
       - run: npm run test:web-sdk
+      - run: npm run test:skill-guidance
       - run: npm run test:providers
       - run: npm run benchmark:router -- 5000
       - run: npm run pack:check
