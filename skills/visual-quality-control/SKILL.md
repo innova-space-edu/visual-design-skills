@@ -1,7 +1,15 @@
 ---
 name: visual-quality-control
-description: Inspect visual outputs against the VisualBrief, score failures by severity, and generate targeted repair instructions.
+description: "Inspect visual outputs against the VisualBrief, score failures by severity, and generate targeted repair instructions. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "core"
+  default-render-strategy: "validator"
 ---
+
 
 # Visual Quality Control
 

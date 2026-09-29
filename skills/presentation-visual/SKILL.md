@@ -1,12 +1,15 @@
 ---
 name: presentation-visual
-description: Create slide-ready visual assets such as hero illustrations, process diagrams, section dividers, data graphics, and branded backgrounds. Use for visuals intended for presentations, not for authoring the whole slide deck.
+description: "Create slide-ready visual assets such as hero illustrations, process diagrams, section dividers, data graphics, and branded backgrounds. Use for visuals intended for presentations, not for authoring the whole slide deck. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "design/editorial"
+  default-render-strategy: "hybrid"
 ---
+
 
 # presentation-visual
 

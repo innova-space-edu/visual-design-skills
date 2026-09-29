@@ -1,6 +1,6 @@
 {
   "name": "visual-design-skills",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,9 @@
     "validate:examples": "node scripts/validate-examples.mjs",
     "validate:evals": "node scripts/validate-evals.mjs",
     "route": "node scripts/route.mjs",
-    "list": "node scripts/list-skills.mjs"
+    "list": "node scripts/list-skills.mjs",
+    "validate:brief": "node runtime/validate-brief.mjs",
+    "select:backend": "node runtime/select-backend.mjs",
+    "compile": "node runtime/compile.mjs"
   }
 }

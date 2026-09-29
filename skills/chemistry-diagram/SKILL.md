@@ -1,7 +1,15 @@
 ---
 name: chemistry-diagram
-description: Create chemistry visuals with exact formulas, equations, molecular/particle representations, apparatus schematics, and labels.
+description: "Create chemistry visuals with exact formulas, equations, molecular/particle representations, apparatus schematics, and labels. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "education/chemistry"
+  default-render-strategy: "deterministic"
 ---
+
 
 # chemistry-diagram
 

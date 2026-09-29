@@ -1,7 +1,15 @@
 ---
 name: product-photo
-description: Create product imagery that preserves product identity, proportions, labels, materials, and commercially useful lighting.
+description: "Create product imagery that preserves product identity, proportions, labels, materials, and commercially useful lighting. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "photography"
+  default-render-strategy: "generative"
 ---
+
 
 # product-photo
 

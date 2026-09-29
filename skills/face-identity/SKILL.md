@@ -1,7 +1,15 @@
 ---
 name: face-identity
-description: Preserve the visible identity of a person from authorized references while changing scene, pose, styling, or lighting.
+description: "Preserve the visible identity of a person from authorized references while changing scene, pose, styling, or lighting. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "identity"
+  default-render-strategy: "generative"
 ---
+
 
 # face-identity
 

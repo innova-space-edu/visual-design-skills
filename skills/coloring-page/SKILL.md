@@ -1,12 +1,15 @@
 ---
 name: coloring-page
-description: Create clean printable coloring pages with closed contours, controlled line weight, minimal shading, and age-appropriate complexity.
+description: "Create clean printable coloring pages with closed contours, controlled line weight, minimal shading, and age-appropriate complexity. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "illustration/print"
+  default-render-strategy: "deterministic"
 ---
+
 
 # coloring-page
 

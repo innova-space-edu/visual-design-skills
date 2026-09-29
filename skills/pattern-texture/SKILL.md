@@ -1,12 +1,15 @@
 ---
 name: pattern-texture
-description: Create seamless repeating patterns or material textures for backgrounds, textiles, packaging, UI, or 3D use. Use when seamless tiling or repeatability matters.
+description: "Create seamless repeating patterns or material textures for backgrounds, textiles, packaging, UI, or 3D use. Use when seamless tiling or repeatability matters. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "design/material"
+  default-render-strategy: "hybrid"
 ---
+
 
 # pattern-texture
 

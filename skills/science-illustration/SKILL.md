@@ -1,7 +1,15 @@
 ---
 name: science-illustration
-description: Create scientific illustrations with explicit distinction between anatomically/physically accurate structure and illustrative simplification.
+description: "Create scientific illustrations with explicit distinction between anatomically/physically accurate structure and illustrative simplification. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "education/science"
+  default-render-strategy: "hybrid"
 ---
+
 
 # science-illustration
 

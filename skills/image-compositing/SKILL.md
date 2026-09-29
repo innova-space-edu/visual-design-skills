@@ -1,12 +1,15 @@
 ---
 name: image-compositing
-description: Combine multiple source images into one coherent composition with explicit layer roles, perspective, scale, lighting, occlusion, and color matching. Use for montage, photomontage, scene assembly, or multi-source composition.
+description: "Combine multiple source images into one coherent composition with explicit layer roles, perspective, scale, lighting, occlusion, and color matching. Use for montage, photomontage, scene assembly, or multi-source composition. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "image editing"
+  default-render-strategy: "hybrid"
 ---
+
 
 # image-compositing
 

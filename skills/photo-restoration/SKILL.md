@@ -1,12 +1,15 @@
 ---
 name: photo-restoration
-description: Restore damaged, faded, scratched, noisy, low-resolution, or aged photographs while preserving identity, era, composition, and documentary content. Use whenever the user asks to restore, repair, clean, denoise, deblur, recolor, or recover an old photo.
+description: "Restore damaged, faded, scratched, noisy, low-resolution, or aged photographs while preserving identity, era, composition, and documentary content. Use whenever the user asks to restore, repair, clean, denoise, deblur, recolor, or recover an old photo. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "photography/edit"
+  default-render-strategy: "hybrid"
 ---
+
 
 # photo-restoration
 

@@ -1,12 +1,15 @@
 ---
 name: timeline-design
-description: Create chronological timelines with exact dates, intervals, milestones, labels, and optional illustrative assets. Use for historical, project, educational, or roadmap timelines.
+description: "Create chronological timelines with exact dates, intervals, milestones, labels, and optional illustrative assets. Use for historical, project, educational, or roadmap timelines. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "diagram"
+  default-render-strategy: "deterministic"
 ---
+
 
 # timeline-design
 
