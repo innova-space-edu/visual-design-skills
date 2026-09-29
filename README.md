@@ -1,49 +1,38 @@
 # Visual Design Skills
 
-General-purpose visual intelligence skills and a local-first Web SDK.
+General-purpose visual intelligence skills, local-first Web SDK, provider executors, and a standalone integration demo.
 
-## v1.3
+## v1.4
 
-The project now has two layers:
-
-1. **General Visual Design SDK** — reusable from any website/app.
-2. **EDUAI adapter contract** — EDUAI can add curriculum, memory, provider policy and educational context without modifying the generic core.
-
-## Lowest-cost path
+The repo can now test the complete path before EDUAI:
 
 ```text
-web request
-  -> local router            $0 provider calls
-  -> VisualBrief             $0
-  -> validation              $0
-  -> backend selection       $0
-  -> compile                 $0
-  -> deterministic render    can remain $0
-  -> image provider          only when the job actually needs generation
+prompt
+ -> local route/plan ($0)
+ -> VisualBrief
+ -> backend selection
+ -> secure server executor
+ -> SVG / OpenAI Images / FLUX
+ -> result
 ```
 
-The optional semantic router is invoked only for low-confidence requests.
+### Built-in executors
+- SVG deterministic preview — no API key / no provider cost
+- OpenAI Images generation — server-side key
+- Black Forest Labs FLUX.2 — server-side key with async polling
 
-## Install now
+### Demo
+Open `/` after deploying to Vercel. Planning runs locally in the browser; generation calls `/api/visual`.
 
+### Install
 ```bash
 npm install github:innova-space-edu/visual-design-skills
 ```
 
+### General SDK
 ```js
 import { visual } from "@innova-space/visual-design";
-const plan = visual.plan("Haz una infografía educativa");
+const plan = visual.plan('Diseña un logo editable para "Innova Lab"');
 ```
 
-## Entry points
-
-- `@innova-space/visual-design` — unified SDK
-- `@innova-space/visual-design/core` — pure browser-safe primitives
-- `@innova-space/visual-design/browser` — cache + gateway client
-- `@innova-space/visual-design/server` — secure generic gateway
-- `@innova-space/visual-design/nextjs` — Route Handler adapter
-- `@innova-space/visual-design/cloudflare` — Worker adapter
-
-The runtime has no external package dependencies.
-
-See `docs/web-sdk.md`, `docs/provider-contract.md`, and `docs/eduai-adapter-contract.md`.
+See `docs/web-sdk.md`, `docs/providers-and-demo.md`, and `.env.example`.

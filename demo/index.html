@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visual Design Skills — Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#0f172a;background:#f8fafc}
+*{box-sizing:border-box}body{margin:0}.wrap{max-width:1180px;margin:auto;padding:32px 20px 64px}
+.hero{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:24px}
+h1{font-size:clamp(30px,5vw,54px);line-height:1;margin:0 0 12px}p{color:#64748b;line-height:1.6}
+.badge{padding:8px 12px;border:1px solid #cbd5e1;border-radius:999px;background:#fff;font-size:13px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}@media(max-width:850px){.grid{grid-template-columns:1fr}.hero{display:block}.badge{display:inline-block;margin-top:8px}}
+.card{background:white;border:1px solid #e2e8f0;border-radius:20px;padding:20px;box-shadow:0 8px 30px #0f172a0b}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}textarea,input,select{width:100%;border:1px solid #cbd5e1;border-radius:12px;padding:12px 13px;font:inherit;background:white}
+textarea{min-height:125px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}button{border:0;border-radius:12px;padding:12px 16px;font-weight:750;cursor:pointer;background:#111827;color:white}
+button.secondary{background:#eef2ff;color:#3730a3}.status{font-size:13px;margin-top:12px;color:#64748b}.pill{display:inline-block;padding:5px 9px;margin:3px;border-radius:999px;background:#f1f5f9;font-size:12px}
+.preview{min-height:330px;display:grid;place-items:center;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:16px;overflow:hidden}.preview img{max-width:100%;max-height:520px;object-fit:contain}.placeholder{text-align:center;padding:30px;color:#94a3b8}
+pre{white-space:pre-wrap;word-break:break-word;font-size:12px;background:#0f172a;color:#e2e8f0;border-radius:14px;padding:14px;max-height:390px;overflow:auto}
+.metric{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.metric div{background:#f8fafc;border-radius:12px;padding:10px}.metric b{display:block;font-size:20px}.metric span{font-size:11px;color:#64748b}
+small{color:#94a3b8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero"><div><h1>Visual Design Skills</h1><p>Demo local-first: routing, brief y selección de backend ocurren en el navegador. Solo la generación externa usa el servidor.</p></div><span class="badge">v1.4 demo</span></div>
+  <div class="grid">
+    <section class="card">
+      <label>Solicitud visual</label>
+      <textarea id="prompt">Diseña un logo editable para "Innova Lab" con estilo tecnológico limpio</textarea>
+      <div class="row">
+        <div><label>Backend de ejecución</label><select id="backend"><option value="">Automático</option><option value="svg">SVG — $0</option><option value="openai">OpenAI Images</option><option value="flux">FLUX / BFL</option></select></div>
+        <div><label>Token demo (solo generación externa)</label><input id="token" type="password" placeholder="Opcional"></div>
+      </div>
+      <div class="actions"><button id="plan" class="secondary">Plan local $0</button><button id="execute">Ejecutar</button></div>
+      <div id="status" class="status">Cargando SDK…</div>
+      <div class="metric"><div><b id="confidence">—</b><span>confianza router</span></div><div><b id="calls">—</b><span>llamadas externas plan</span></div><div><b id="generation">—</b><span>llamadas generación</span></div></div>
+      <div id="skills"></div>
+      <details style="margin-top:14px"><summary>Plan JSON</summary><pre id="json">—</pre></details>
+    </section>
+    <section class="card">
+      <h2 style="margin-top:0">Resultado</h2>
+      <div id="preview" class="preview"><div class="placeholder">Ejecuta SVG para una prueba gratuita o configura un proveedor en el servidor.</div></div>
+      <p><small>OpenAI y FLUX nunca reciben claves desde el navegador. El endpoint del servidor mantiene los secretos.</small></p>
+    </section>
+  </div>
+</div>
+<script type="module" src="/demo/app.js"></script>
+</body></html>
