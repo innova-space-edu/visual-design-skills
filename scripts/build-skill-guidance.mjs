@@ -7,10 +7,17 @@ const registry=JSON.parse(fs.readFileSync(path.join(root,"registry.json"),"utf8"
 const out={};
 
 function section(text,heading){
-  const re=new RegExp("^##\\s+"+heading+"\\s*$([\\s\\S]*?)(?=^##\\s+|$)","mi");
-  const match=text.match(re);
-  if(!match)return[];
-  return match[1].split(/\\r?\\n/).map(line=>line.trim()).filter(line=>/^[-*]\\s+/.test(line)).map(line=>line.replace(/^[-*]\\s+/,"").trim()).filter(Boolean);
+  const lines=text.split(/\\r?\\n/);
+  const target="## "+heading.toLowerCase();
+  const start=lines.findIndex(line=>line.trim().toLowerCase()===target);
+  if(start<0)return[];
+  const out=[];
+  for(let i=start+1;i<lines.length;i+=1){
+    const trimmed=lines[i].trim();
+    if(trimmed.startsWith("## "))break;
+    if(/^[-*]\\s+/.test(trimmed))out.push(trimmed.replace(/^[-*]\\s+/,"").trim());
+  }
+  return out.filter(Boolean);
 }
 function description(text){
   const raw=text.match(/^description:\\s*(.+)$/m)?.[1]?.trim()||"";
