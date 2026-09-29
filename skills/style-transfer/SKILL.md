@@ -1,12 +1,15 @@
 ---
 name: style-transfer
-description: Apply a requested visual language to an image while preserving selected content, identity, geometry, or layout. Use whenever the user asks to restyle an existing image or transfer visual style from a reference.
+description: "Apply a requested visual language to an image while preserving selected content, identity, geometry, or layout. Use whenever the user asks to restyle an existing image or transfer visual style from a reference. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "image editing"
+  default-render-strategy: "generative"
 ---
+
 
 # style-transfer
 

@@ -1,7 +1,15 @@
 ---
 name: landscape
-description: Create landscape, nature, urban, aerial, panoramic, weather, or nightscape imagery with deliberate depth and atmospheric composition.
+description: "Create landscape, nature, urban, aerial, panoramic, weather, or nightscape imagery with deliberate depth and atmospheric composition. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "photography"
+  default-render-strategy: "generative"
 ---
+
 
 # landscape
 

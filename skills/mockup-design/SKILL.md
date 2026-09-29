@@ -1,12 +1,15 @@
 ---
 name: mockup-design
-description: Create presentation mockups for packaging, posters, screens, devices, apparel, books, signage, or branded objects while preserving artwork proportions and placement. Use for realistic product/application previews.
+description: "Create presentation mockups for packaging, posters, screens, devices, apparel, books, signage, or branded objects while preserving artwork proportions and placement. Use for realistic product/application previews. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "design"
+  default-render-strategy: "hybrid"
 ---
+
 
 # mockup-design
 

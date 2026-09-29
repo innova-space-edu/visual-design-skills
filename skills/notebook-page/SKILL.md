@@ -1,7 +1,15 @@
 ---
 name: notebook-page
-description: Design notebook or study-note pages with ruled/grid paper, headings, formulas, callouts, annotations, and optional handwritten aesthetic.
+description: "Design notebook or study-note pages with ruled/grid paper, headings, formulas, callouts, annotations, and optional handwritten aesthetic. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "editorial/education"
+  default-render-strategy: "hybrid"
 ---
+
 
 # notebook-page
 

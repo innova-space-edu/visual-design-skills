@@ -1,7 +1,15 @@
 ---
 name: map-design
-description: Create geographically accurate maps from real coordinates and geospatial data using deterministic map layers.
+description: "Create geographically accurate maps from real coordinates and geospatial data using deterministic map layers. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "geospatial"
+  default-render-strategy: "deterministic"
 ---
+
 
 # map-design
 

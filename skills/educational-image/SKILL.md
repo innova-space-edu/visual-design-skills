@@ -1,7 +1,15 @@
 ---
 name: educational-image
-description: Create age-appropriate instructional visuals that prioritize conceptual clarity, curriculum-relevant labels, and low cognitive clutter.
+description: "Create age-appropriate instructional visuals that prioritize conceptual clarity, curriculum-relevant labels, and low cognitive clutter. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "education"
+  default-render-strategy: "hybrid"
 ---
+
 
 # educational-image
 

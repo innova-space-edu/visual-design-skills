@@ -1,7 +1,15 @@
 ---
 name: data-visualization
-description: Render trustworthy charts and quantitative graphics from source data with declarative encodings and validated scales.
+description: "Render trustworthy charts and quantitative graphics from source data with declarative encodings and validated scales. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "data"
+  default-render-strategy: "deterministic"
 ---
+
 
 # data-visualization
 

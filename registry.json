@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "suite": "visual-design-skills",
   "description": "Specialist visual intelligence skills with progressive disclosure, deterministic/hybrid/generative routing, low-cost prefiltering, and backend-aware quality control.",
   "core": [
@@ -420,5 +420,11 @@
     "catalog": "routing/routing-catalog.json",
     "precedence": "routing/precedence.json",
     "low_cost_prefilter": "scripts/route.mjs"
+  },
+  "runtime": {
+    "validate_brief": "runtime/validate-brief.mjs",
+    "select_backend": "runtime/select-backend.mjs",
+    "compile": "runtime/compile.mjs",
+    "capability_matrix": "references/capability-matrix.json"
   }
 }

@@ -1,7 +1,15 @@
 ---
 name: editorial-photo
-description: Create fashion/editorial photography with art direction, styling, set design, controlled pose, and magazine-grade composition.
+description: "Create fashion/editorial photography with art direction, styling, set design, controlled pose, and magazine-grade composition. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "photography"
+  default-render-strategy: "generative"
 ---
+
 
 # editorial-photo
 

@@ -1,7 +1,15 @@
 ---
 name: visual-design-router
-description: Classify visual requests, build a structured VisualBrief, select specialist skills, choose deterministic/hybrid/generative rendering, and route to the correct backend.
+description: "Classify visual requests, build a structured VisualBrief, select specialist skills, choose deterministic/hybrid/generative rendering, and route to the correct backend. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "core"
+  default-render-strategy: "router"
 ---
+
 
 # Visual Design Router
 

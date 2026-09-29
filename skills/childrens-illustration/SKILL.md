@@ -1,7 +1,15 @@
 ---
 name: childrens-illustration
-description: Create child-friendly illustrations with clear silhouettes, age-appropriate visual complexity, expressive poses, and safe readable composition.
+description: "Create child-friendly illustrations with clear silhouettes, age-appropriate visual complexity, expressive poses, and safe readable composition. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "illustration"
+  default-render-strategy: "generative"
 ---
+
 
 # childrens-illustration
 

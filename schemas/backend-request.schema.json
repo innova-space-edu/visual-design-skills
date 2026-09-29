@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BackendRequest",
+  "type": "object",
+  "required": [
+    "backend",
+    "mode"
+  ],
+  "properties": {
+    "backend": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visual_brief": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "workflow_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "edit_contract": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

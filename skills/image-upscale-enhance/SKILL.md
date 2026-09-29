@@ -1,12 +1,15 @@
 ---
 name: image-upscale-enhance
-description: Increase usable image resolution and perceived detail without changing subject identity, text, geometry, branding, or composition. Use for upscale, sharpen, enhance, super-resolution, denoise, or print-preparation requests.
+description: "Increase usable image resolution and perceived detail without changing subject identity, text, geometry, branding, or composition. Use for upscale, sharpen, enhance, super-resolution, denoise, or print-preparation requests. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
 license: MIT
 compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
 metadata:
   author: Innova Space Education
-  version: "1.1.0"
+  version: "1.2.0"
+  category: "image processing"
+  default-render-strategy: "hybrid"
 ---
+
 
 # image-upscale-enhance
 

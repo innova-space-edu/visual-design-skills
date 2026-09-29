@@ -1,7 +1,15 @@
 ---
 name: typography-design
-description: Create typography-led compositions, title cards, word art, and text-integrated imagery while preserving exact wording and hierarchy.
+description: "Create typography-led compositions, title cards, word art, and text-integrated imagery while preserving exact wording and hierarchy. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "design"
+  default-render-strategy: "hybrid"
 ---
+
 
 # typography-design
 

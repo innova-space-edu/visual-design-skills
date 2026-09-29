@@ -1,7 +1,15 @@
 ---
 name: graphic-design
-description: Create general-purpose graphic layouts using hierarchy, grid, spacing, palette, typography, imagery, and brand constraints.
+description: "Create general-purpose graphic layouts using hierarchy, grid, spacing, palette, typography, imagery, and brand constraints. Use this skill whenever the user's visual request belongs to this domain, even when the skill name is not explicitly mentioned."
+license: MIT
+compatibility: Works with AI agents that can load Agent Skills-style SKILL.md files; backend tools are selected separately.
+metadata:
+  author: Innova Space Education
+  version: "1.2.0"
+  category: "design"
+  default-render-strategy: "hybrid"
 ---
+
 
 # graphic-design
 
