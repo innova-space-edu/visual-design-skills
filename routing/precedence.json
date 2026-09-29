@@ -1,0 +1,111 @@
+{
+  "version": "1.1.0",
+  "rules": [
+    {
+      "when": [
+        "real_coordinates_or_geodata"
+      ],
+      "prefer": [
+        "map-design"
+      ],
+      "suppress": [
+        "stylized-map"
+      ]
+    },
+    {
+      "when": [
+        "authoritative_dimensions"
+      ],
+      "prefer": [
+        "technical-floorplan",
+        "technical-drawing"
+      ],
+      "suppress": [
+        "floorplan-concept"
+      ]
+    },
+    {
+      "when": [
+        "exact_numeric_data"
+      ],
+      "prefer": [
+        "data-visualization"
+      ],
+      "requires": [
+        "deterministic"
+      ]
+    },
+    {
+      "when": [
+        "exact_math_geometry"
+      ],
+      "prefer": [
+        "math-diagram"
+      ],
+      "requires": [
+        "deterministic"
+      ]
+    },
+    {
+      "when": [
+        "exact_long_text"
+      ],
+      "prefer": [
+        "typography-design",
+        "graphic-design"
+      ],
+      "requires": [
+        "deterministic_text_layer"
+      ]
+    },
+    {
+      "when": [
+        "identity_reference"
+      ],
+      "add": [
+        "face-identity",
+        "multi-reference"
+      ]
+    },
+    {
+      "when": [
+        "existing_image_edit"
+      ],
+      "add": [
+        "image-edit"
+      ]
+    },
+    {
+      "when": [
+        "multiple_source_images"
+      ],
+      "add": [
+        "multi-reference"
+      ]
+    },
+    {
+      "when": [
+        "educational_domain"
+      ],
+      "add": [
+        "educational-image"
+      ]
+    },
+    {
+      "when": [
+        "exact_labels_or_formulas"
+      ],
+      "requires": [
+        "deterministic_text_layer"
+      ]
+    },
+    {
+      "when": [
+        "generated_visual_plus_exact_structure"
+      ],
+      "requires": [
+        "hybrid"
+      ]
+    }
+  ]
+}

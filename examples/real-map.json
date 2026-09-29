@@ -1,0 +1,30 @@
+{
+  "request": "Mapa real con ubicaciones por coordenadas.",
+  "routing": {
+    "selected_skills": [
+      "map-design",
+      "graphic-design"
+    ],
+    "render_strategy": "deterministic",
+    "preferred_backends": [
+      "maplibre",
+      "svg"
+    ]
+  },
+  "visual_brief": {
+    "purpose": "Show real locations",
+    "visual_type": "map",
+    "render_strategy": "deterministic",
+    "composition": {},
+    "data": {
+      "coordinates_authoritative": true
+    },
+    "constraints": [
+      "do not invent roads or positions"
+    ],
+    "output": {
+      "format": "png+geojson",
+      "editable": true
+    }
+  }
+}

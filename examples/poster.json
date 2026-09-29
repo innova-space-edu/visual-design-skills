@@ -1,0 +1,36 @@
+{
+  "request": "Afiche vertical FERIA CIENTÍFICA 2026 con imagen espacial.",
+  "routing": {
+    "selected_skills": [
+      "poster-design",
+      "typography-design",
+      "graphic-design"
+    ],
+    "render_strategy": "hybrid",
+    "preferred_backends": [
+      "svg",
+      "flux"
+    ]
+  },
+  "visual_brief": {
+    "purpose": "Event poster",
+    "visual_type": "poster",
+    "render_strategy": "hybrid",
+    "composition": {
+      "aspect": "4:5"
+    },
+    "text_blocks": [
+      {
+        "text": "FERIA CIENTÍFICA 2026",
+        "exact": true
+      }
+    ],
+    "constraints": [
+      "exact headline"
+    ],
+    "output": {
+      "format": "png+svg",
+      "editable": true
+    }
+  }
+}

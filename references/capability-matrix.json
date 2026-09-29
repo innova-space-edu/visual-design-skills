@@ -1,0 +1,101 @@
+{
+  "version": "1.1.0",
+  "legend": {
+    "excellent": 3,
+    "good": 2,
+    "limited": 1,
+    "avoid": 0
+  },
+  "backends": {
+    "openai": {
+      "photo": 3,
+      "illustration": 3,
+      "editing": 3,
+      "multi_reference": 2,
+      "typography": 2,
+      "vector": 0,
+      "exact_geometry": 0,
+      "exact_data": 0
+    },
+    "flux": {
+      "photo": 3,
+      "illustration": 3,
+      "editing": 3,
+      "multi_reference": 3,
+      "typography": 3,
+      "vector": 0,
+      "exact_geometry": 0,
+      "exact_data": 0
+    },
+    "qwen-image": {
+      "photo": 2,
+      "illustration": 3,
+      "editing": 3,
+      "multi_reference": 2,
+      "typography": 3,
+      "vector": 0,
+      "exact_geometry": 1,
+      "exact_data": 0
+    },
+    "ideogram": {
+      "photo": 2,
+      "illustration": 2,
+      "editing": 2,
+      "multi_reference": 1,
+      "typography": 3,
+      "vector": 1,
+      "exact_geometry": 0,
+      "exact_data": 0
+    },
+    "recraft": {
+      "photo": 1,
+      "illustration": 3,
+      "editing": 2,
+      "multi_reference": 1,
+      "typography": 2,
+      "vector": 3,
+      "exact_geometry": 2,
+      "exact_data": 0
+    },
+    "comfyui": {
+      "photo": 3,
+      "illustration": 3,
+      "editing": 3,
+      "multi_reference": 3,
+      "typography": 2,
+      "vector": 0,
+      "exact_geometry": 2,
+      "exact_data": 0
+    },
+    "svg": {
+      "photo": 0,
+      "illustration": 2,
+      "editing": 1,
+      "multi_reference": 0,
+      "typography": 3,
+      "vector": 3,
+      "exact_geometry": 3,
+      "exact_data": 3
+    },
+    "maplibre": {
+      "photo": 0,
+      "illustration": 0,
+      "editing": 0,
+      "multi_reference": 0,
+      "typography": 2,
+      "vector": 2,
+      "exact_geometry": 3,
+      "exact_data": 3
+    },
+    "vega-lite": {
+      "photo": 0,
+      "illustration": 0,
+      "editing": 0,
+      "multi_reference": 0,
+      "typography": 2,
+      "vector": 2,
+      "exact_geometry": 3,
+      "exact_data": 3
+    }
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "version": "1.1.0",
+  "normalization": "lowercase, Unicode NFD accent stripping, punctuation-to-space",
+  "note": "This catalog is a low-cost candidate prefilter. visual-design-router remains authoritative.",
+  "entries": [
+    {
+      "skill": "map-design",
+      "weight": 10,
+      "terms": [
+        "mapa real",
+        "mapa geografico",
+        "coordenadas",
+        "geojson",
+        "ubicaciones reales",
+        "geographic map",
+        "coordinates"
+      ]
+    },
+    {
+      "skill": "stylized-map",
+      "weight": 9,
+      "terms": [
+        "mapa fantastico",
+        "mapa medieval",
+        "mapa ilustrado",
+        "fantasy map",
+        "tourist illustrated map"
+      ]
+    },
+    {
+      "skill": "technical-floorplan",
+      "weight": 10,
+      "terms": [
+        "plano tecnico",
+        "cotas",
+        "medidas exactas",
+        "escala 1:",
+        "floor plan dimensions",
+        "dimensioned floorplan"
+      ]
+    },
+    {
+      "skill": "floorplan-concept",
+      "weight": 8,
+      "terms": [
+        "plano conceptual",
+        "distribucion de espacios",
+        "zoning",
+        "layout de sala",
+        "concept floorplan"
+      ]
+    },
+    {
+      "skill": "math-diagram",
+      "weight": 10,
+      "terms": [
+        "homotecia",
+        "geometria",
+        "triangulo",
+        "circunferencia",
+        "transformacion geometrica",
+        "math diagram"
+      ]
+    },
+    {
+      "skill": "physics-diagram",
+      "weight": 10,
+      "terms": [
+        "fuerza",
+        "vector",
+        "circuito",
+        "rayos",
+        "campo electrico",
+        "physics diagram"
+      ]
+    },
+    {
+      "skill": "chemistry-diagram",
+      "weight": 10,
+      "terms": [
+        "ecuacion quimica",
+        "molecula",
+        "estequiometria",
+        "mol",
+        "chemistry diagram"
+      ]
+    },
+    {
+      "skill": "biology-diagram",
+      "weight": 10,
+      "terms": [
+        "anatomia",
+        "celula",
+        "organo",
+        "ojo humano",
+        "biology diagram"
+      ]
+    },
+    {
+      "skill": "data-visualization",
+      "weight": 10,
+      "terms": [
+        "grafico de barras",
+        "grafico lineal",
+        "datos",
+        "chart",
+        "bar chart",
+        "data visualization"
+      ]
+    },
+    {
+      "skill": "infographic",
+      "weight": 8,
+      "terms": [
+        "infografia",
+        "infographic"
+      ]
+    },
+    {
+      "skill": "selfie",
+      "weight": 10,
+      "terms": [
+        "selfie",
+        "mirror selfie",
+        "selfi"
+      ]
+    },
+    {
+      "skill": "portrait",
+      "weight": 8,
+      "terms": [
+        "retrato",
+        "portrait",
+        "headshot"
+      ]
+    },
+    {
+      "skill": "face-identity",
+      "weight": 11,
+      "terms": [
+        "mismo rostro",
+        "misma cara",
+        "mantener identidad",
+        "same face",
+        "preserve identity"
+      ]
+    },
+    {
+      "skill": "product-photo",
+      "weight": 9,
+      "terms": [
+        "foto de producto",
+        "packshot",
+        "product photo",
+        "fotografia comercial"
+      ]
+    },
+    {
+      "skill": "landscape",
+      "weight": 8,
+      "terms": [
+        "paisaje",
+        "landscape",
+        "nightscape",
+        "panorama"
+      ]
+    },
+    {
+      "skill": "poster-design",
+      "weight": 9,
+      "terms": [
+        "afiche",
+        "poster",
+        "cartel"
+      ]
+    },
+    {
+      "skill": "logo-design",
+      "weight": 10,
+      "terms": [
+        "logo",
+        "logotipo",
+        "wordmark"
+      ]
+    },
+    {
+      "skill": "icon-design",
+      "weight": 9,
+      "terms": [
+        "icono",
+        "icon set",
+        "pictograma"
+      ]
+    },
+    {
+      "skill": "worksheet-design",
+      "weight": 10,
+      "terms": [
+        "guia de ejercicios",
+        "worksheet",
+        "hoja de ejercicios"
+      ]
+    },
+    {
+      "skill": "notebook-page",
+      "weight": 9,
+      "terms": [
+        "cuaderno",
+        "hoja cuadriculada",
+        "notebook page",
+        "study notes"
+      ]
+    },
+    {
+      "skill": "comic",
+      "weight": 9,
+      "terms": [
+        "comic",
+        "historieta",
+        "vinetas"
+      ]
+    },
+    {
+      "skill": "cartoon",
+      "weight": 8,
+      "terms": [
+        "dibujo animado",
+        "cartoon"
+      ]
+    },
+    {
+      "skill": "anime-general",
+      "weight": 8,
+      "terms": [
+        "anime",
+        "manga style"
+      ]
+    },
+    {
+      "skill": "image-edit",
+      "weight": 7,
+      "terms": [
+        "editar imagen",
+        "modifica esta imagen",
+        "remove object",
+        "replace background",
+        "edit image"
+      ]
+    },
+    {
+      "skill": "background-removal",
+      "weight": 11,
+      "terms": [
+        "quitar fondo",
+        "fondo transparente",
+        "remove background",
+        "transparent png"
+      ]
+    },
+    {
+      "skill": "photo-restoration",
+      "weight": 10,
+      "terms": [
+        "restaurar foto",
+        "foto antigua",
+        "rayones",
+        "restore old photo",
+        "photo restoration"
+      ]
+    },
+    {
+      "skill": "image-upscale-enhance",
+      "weight": 10,
+      "terms": [
+        "aumentar resolucion",
+        "mejorar calidad",
+        "upscale",
+        "enhance image",
+        "super resolution"
+      ]
+    },
+    {
+      "skill": "image-compositing",
+      "weight": 9,
+      "terms": [
+        "fotomontaje",
+        "montaje",
+        "combinar imagenes",
+        "composite images"
+      ]
+    },
+    {
+      "skill": "style-transfer",
+      "weight": 9,
+      "terms": [
+        "cambiar estilo",
+        "transferir estilo",
+        "style transfer",
+        "restyle"
+      ]
+    },
+    {
+      "skill": "mockup-design",
+      "weight": 9,
+      "terms": [
+        "mockup",
+        "maqueta de producto",
+        "device mockup"
+      ]
+    },
+    {
+      "skill": "ui-visual-design",
+      "weight": 9,
+      "terms": [
+        "interfaz",
+        "ui mockup",
+        "dashboard visual",
+        "pantalla de app"
+      ]
+    },
+    {
+      "skill": "flowchart-diagram",
+      "weight": 10,
+      "terms": [
+        "diagrama de flujo",
+        "flowchart",
+        "decision tree",
+        "process diagram"
+      ]
+    },
+    {
+      "skill": "timeline-design",
+      "weight": 10,
+      "terms": [
+        "linea de tiempo",
+        "timeline",
+        "cronologia"
+      ]
+    },
+    {
+      "skill": "storyboard",
+      "weight": 10,
+      "terms": [
+        "storyboard",
+        "guion grafico",
+        "shot list"
+      ]
+    },
+    {
+      "skill": "coloring-page",
+      "weight": 10,
+      "terms": [
+        "para colorear",
+        "coloring page",
+        "line art printable"
+      ]
+    },
+    {
+      "skill": "pattern-texture",
+      "weight": 9,
+      "terms": [
+        "patron seamless",
+        "textura repetible",
+        "seamless pattern",
+        "tileable texture"
+      ]
+    },
+    {
+      "skill": "isometric-illustration",
+      "weight": 9,
+      "terms": [
+        "isometrico",
+        "isometric"
+      ]
+    },
+    {
+      "skill": "architectural-elevation",
+      "weight": 10,
+      "terms": [
+        "elevacion arquitectonica",
+        "fachada ortografica",
+        "architectural elevation",
+        "section drawing"
+      ]
+    },
+    {
+      "skill": "advertising-creative",
+      "weight": 8,
+      "terms": [
+        "anuncio",
+        "publicidad",
+        "ad creative",
+        "campaign visual"
+      ]
+    },
+    {
+      "skill": "presentation-visual",
+      "weight": 8,
+      "terms": [
+        "visual para presentacion",
+        "slide visual",
+        "presentation graphic"
+      ]
+    },
+    {
+      "skill": "graphic-design",
+      "weight": 5,
+      "terms": [
+        "diseno grafico",
+        "graphic design"
+      ]
+    },
+    {
+      "skill": "educational-image",
+      "weight": 5,
+      "terms": [
+        "imagen educativa",
+        "material educativo",
+        "educational image"
+      ]
+    },
+    {
+      "skill": "photorealism",
+      "weight": 4,
+      "terms": [
+        "realista",
+        "fotorealista",
+        "photorealistic",
+        "realistic photo"
+      ]
+    }
+  ]
+}

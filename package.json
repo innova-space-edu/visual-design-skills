@@ -1,9 +1,14 @@
 {
   "name": "visual-design-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-registry.mjs"
+    "validate": "npm run lint:skills && npm run validate:examples && npm run validate:evals",
+    "lint:skills": "node scripts/lint-skills.mjs",
+    "validate:examples": "node scripts/validate-examples.mjs",
+    "validate:evals": "node scripts/validate-evals.mjs",
+    "route": "node scripts/route.mjs",
+    "list": "node scripts/list-skills.mjs"
   }
 }
