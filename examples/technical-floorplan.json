@@ -1,0 +1,31 @@
+{
+  "request": "Plano técnico 3.8 m x 8 m con cotas.",
+  "routing": {
+    "selected_skills": [
+      "technical-floorplan",
+      "technical-drawing"
+    ],
+    "render_strategy": "deterministic",
+    "preferred_backends": [
+      "svg"
+    ]
+  },
+  "visual_brief": {
+    "purpose": "Dimensioned room plan",
+    "visual_type": "technical floorplan",
+    "render_strategy": "deterministic",
+    "composition": {},
+    "geometry": {
+      "width_m": 3.8,
+      "length_m": 8,
+      "authoritative": true
+    },
+    "constraints": [
+      "dimensions exact"
+    ],
+    "output": {
+      "format": "svg+pdf",
+      "editable": true
+    }
+  }
+}

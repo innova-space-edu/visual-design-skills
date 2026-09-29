@@ -1,0 +1,35 @@
+{
+  "request": "Selfie nocturna manteniendo exactamente el rostro de la referencia.",
+  "routing": {
+    "selected_skills": [
+      "selfie",
+      "photorealism",
+      "face-identity",
+      "multi-reference",
+      "image-edit"
+    ],
+    "render_strategy": "generative",
+    "preferred_backends": [
+      "flux",
+      "openai"
+    ]
+  },
+  "visual_brief": {
+    "purpose": "Identity-preserving night selfie",
+    "visual_type": "selfie",
+    "render_strategy": "generative",
+    "composition": {
+      "framing": "arm length smartphone"
+    },
+    "identity": {
+      "authoritative": true
+    },
+    "preserve": [
+      "face identity"
+    ],
+    "output": {
+      "format": "png",
+      "editable": false
+    }
+  }
+}

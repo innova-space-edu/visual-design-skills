@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "suite": "visual-design-skills",
-  "description": "Specialist visual intelligence skills with deterministic, hybrid, and generative routing.",
+  "description": "Specialist visual intelligence skills with progressive disclosure, deterministic/hybrid/generative routing, low-cost prefiltering, and backend-aware quality control.",
   "core": [
     "visual-design-router",
     "visual-prompt-compiler",
@@ -307,6 +307,102 @@
       "path": "skills/3d-render/SKILL.md",
       "category": "3d",
       "default_render_strategy": "generative"
+    },
+    {
+      "name": "photo-restoration",
+      "path": "skills/photo-restoration/SKILL.md",
+      "category": "photography/edit",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "image-upscale-enhance",
+      "path": "skills/image-upscale-enhance/SKILL.md",
+      "category": "image processing",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "background-removal",
+      "path": "skills/background-removal/SKILL.md",
+      "category": "image editing",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "image-compositing",
+      "path": "skills/image-compositing/SKILL.md",
+      "category": "image editing",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "style-transfer",
+      "path": "skills/style-transfer/SKILL.md",
+      "category": "image editing",
+      "default_render_strategy": "generative"
+    },
+    {
+      "name": "mockup-design",
+      "path": "skills/mockup-design/SKILL.md",
+      "category": "design",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "ui-visual-design",
+      "path": "skills/ui-visual-design/SKILL.md",
+      "category": "design/ui",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "presentation-visual",
+      "path": "skills/presentation-visual/SKILL.md",
+      "category": "design/editorial",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "flowchart-diagram",
+      "path": "skills/flowchart-diagram/SKILL.md",
+      "category": "diagram",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "timeline-design",
+      "path": "skills/timeline-design/SKILL.md",
+      "category": "diagram",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "storyboard",
+      "path": "skills/storyboard/SKILL.md",
+      "category": "illustration/planning",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "coloring-page",
+      "path": "skills/coloring-page/SKILL.md",
+      "category": "illustration/print",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "pattern-texture",
+      "path": "skills/pattern-texture/SKILL.md",
+      "category": "design/material",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "isometric-illustration",
+      "path": "skills/isometric-illustration/SKILL.md",
+      "category": "illustration/technical",
+      "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "architectural-elevation",
+      "path": "skills/architectural-elevation/SKILL.md",
+      "category": "architecture/technical",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "advertising-creative",
+      "path": "skills/advertising-creative/SKILL.md",
+      "category": "design/marketing",
+      "default_render_strategy": "hybrid"
     }
   ],
   "backend_profiles": [
@@ -319,5 +415,10 @@
     "svg",
     "maplibre",
     "vega-lite"
-  ]
+  ],
+  "routing": {
+    "catalog": "routing/routing-catalog.json",
+    "precedence": "routing/precedence.json",
+    "low_cost_prefilter": "scripts/route.mjs"
+  }
 }

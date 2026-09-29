@@ -1,87 +1,38 @@
 # Visual Design Skills
 
-A modular visual-intelligence skill suite for AI agents and EDUAI.
+Modular visual-intelligence skills for EDUAI and compatible AI agents.
 
-It routes visual requests to specialist skills instead of treating every task as generic text-to-image generation.
+## v1.1
 
-## What it covers
+The suite now includes 66 specialist/core skills, low-cost routing prefiltering, backend capability metadata, CI validation, standardized evals, reusable examples, and EDUAI integration guidance.
 
-Photography and identity; portrait/selfie/product/landscape; graphic design, posters, branding, logos, icons and vector work; infographics and data visualization; educational images for mathematics, physics, chemistry and biology; real and stylized maps; conceptual and technical floor plans; technical drawings; notebooks, worksheets and textbook pages; cartoons, comics, anime-general, children's illustration, pixel art and 3D-render style; editing, multi-reference, pose, style and character consistency.
-
-## Architecture
+## Runtime
 
 ```text
-User request
-   ↓
-visual-design-router
-   ↓
-RoutingResult + VisualBrief
-   ↓
-specialist skills
-   ↓
-render strategy
-   ├─ deterministic → SVG / HTML / LaTeX / Vega-Lite / MapLibre / vector primitives
-   ├─ hybrid        → deterministic structure + generated visual assets
-   └─ generative    → image backend
-   ↓
-visual-prompt-compiler / render plan
-   ↓
-visual-quality-control
-   ↓
-targeted repair when required
+request
+  -> cheap candidate prefilter
+  -> visual-design-router
+  -> RoutingResult + VisualBrief
+  -> load selected specialist skills only
+  -> backend selection
+  -> prompt compiler / deterministic renderer
+  -> visual-quality-control
+  -> targeted repair
 ```
 
-## Core skills
+Exact text, data, formulas, coordinates, measurements, and mathematical/technical geometry are deterministic by default. Generative image models are used for appearance-centric tasks or as layers in hybrid workflows.
 
-- `visual-design-router`: classification and skill selection.
-- `visual-prompt-compiler`: converts a normalized brief into backend-specific instructions.
-- `visual-quality-control`: validates the result against measurable requirements.
-- `image-edit`: constrained add/remove/replace/move/recolor/relight/restyle/crop/outpaint/text-edit operations.
-- `multi-reference`, `face-identity`, `pose-control`, `style-consistency`, and `character-consistency`: reference-aware controls.
-
-## Design rule
-
-**Do not ask an image model to be the authority for information that can be rendered deterministically.**
-
-Use deterministic rendering for:
-- mathematical geometry and formulas;
-- quantitative charts;
-- real map coordinates;
-- technical dimensions and floor plans;
-- dense exact text;
-- editable logos/icons/vectors;
-- chemistry equations and educational labels.
-
-Use image generation for appearance-centric work and use hybrid workflows when exact structure and generated aesthetics must coexist.
-
-## Repository layout
-
-```text
-skills/       specialist Agent Skills
-references/   shared rules and backend capability profiles
-schemas/      VisualBrief, routing, render-plan and QA contracts
-evals/        routing/behavior evaluation cases
-scripts/      repository validation
-registry.json machine-readable skill catalog
-```
-
-## Machine-readable registry
-
-`registry.json` is the discovery entrypoint for EDUAI or another agent runtime. Load `visual-design-router` first, then only the selected specialist skills.
-
-## Validation
+## Commands
 
 ```bash
 npm run validate
+npm run list
+npm run route -- "haz un mapa real con coordenadas"
 ```
 
-## Example
-
-Request:
-`Haz una imagen del ojo humano para explicar homotecia en 1° medio.`
-
-Expected route:
-`educational-image + biology-diagram/science-illustration + math-diagram`
-
-Expected strategy:
-deterministic homothety geometry and labels, with an optional generated eye illustration used as a non-authoritative visual layer.
+See:
+- `docs/architecture.md`
+- `docs/eduai-integration.md`
+- `docs/authoring-guide.md`
+- `registry.json`
+- `references/capability-matrix.json`

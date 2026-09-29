@@ -1,0 +1,36 @@
+{
+  "request": "Imagen del ojo humano para explicar homotecia k=-2 en 1° medio.",
+  "routing": {
+    "selected_skills": [
+      "educational-image",
+      "math-diagram",
+      "biology-diagram"
+    ],
+    "render_strategy": "hybrid",
+    "preferred_backends": [
+      "svg",
+      "openai"
+    ]
+  },
+  "visual_brief": {
+    "purpose": "Explain homothety using an eye illustration",
+    "visual_type": "educational diagram",
+    "render_strategy": "hybrid",
+    "composition": {
+      "layout": "eye illustration plus transformation geometry"
+    },
+    "geometry": {
+      "authoritative": true,
+      "transform": "homothety",
+      "k": -2
+    },
+    "constraints": [
+      "projection lines exact",
+      "labels exact"
+    ],
+    "output": {
+      "format": "svg+png",
+      "editable": true
+    }
+  }
+}
