@@ -1,7 +1,7 @@
 {
   "name": "@innova-space/visual-design",
-  "version": "1.3.0",
-  "description": "Local-first visual design routing, planning and backend compilation with modular AI design skills.",
+  "version": "1.4.0",
+  "description": "Local-first visual design routing, planning, provider execution and modular AI design skills.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -17,6 +17,10 @@
     "./server": {
       "types": "./types/server.d.ts",
       "default": "./packages/server/index.js"
+    },
+    "./providers": {
+      "types": "./types/providers.d.ts",
+      "default": "./packages/providers/index.js"
     },
     "./nextjs": "./adapters/nextjs/index.js",
     "./cloudflare": "./adapters/cloudflare/index.js",
@@ -47,6 +51,7 @@
     "select:backend": "node runtime/select-backend.mjs",
     "compile": "node runtime/compile.mjs",
     "test:web-sdk": "node scripts/test-web-sdk.mjs",
+    "test:providers": "node scripts/test-providers.mjs",
     "check:browser": "node scripts/check-browser-safe.mjs",
     "benchmark:router": "node scripts/benchmark-router.mjs",
     "pack:check": "npm pack --dry-run"
