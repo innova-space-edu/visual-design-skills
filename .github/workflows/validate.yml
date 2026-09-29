@@ -20,3 +20,7 @@ jobs:
       - run: npm run select:backend -- examples/selfie-identity.json
       - run: npm run compile -- flux examples/selfie-identity.json
       - run: npm run compile -- svg examples/technical-floorplan.json
+      - run: npm run check:browser
+      - run: npm run test:web-sdk
+      - run: npm run benchmark:router -- 5000
+      - run: npm run pack:check

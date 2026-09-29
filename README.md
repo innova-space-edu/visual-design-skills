@@ -1,35 +1,49 @@
 # Visual Design Skills
 
-Modular visual-intelligence skills for EDUAI and compatible AI agents.
+General-purpose visual intelligence skills and a local-first Web SDK.
 
-## v1.2
+## v1.3
 
-The suite contains 66 skills with standardized frontmatter, progressive disclosure, low-cost routing, deterministic/hybrid/generative execution rules, backend capability selection, runtime brief validation, backend request compilation, CI and evals.
+The project now has two layers:
+
+1. **General Visual Design SDK** — reusable from any website/app.
+2. **EDUAI adapter contract** — EDUAI can add curriculum, memory, provider policy and educational context without modifying the generic core.
+
+## Lowest-cost path
 
 ```text
-request
- -> candidate prefilter
- -> visual-design-router
- -> RoutingResult + VisualBrief
- -> load selected specialist skills only
- -> validate brief
- -> select backend(s)
- -> compile BackendRequest / deterministic plan
- -> execute
- -> visual-quality-control
- -> targeted repair
+web request
+  -> local router            $0 provider calls
+  -> VisualBrief             $0
+  -> validation              $0
+  -> backend selection       $0
+  -> compile                 $0
+  -> deterministic render    can remain $0
+  -> image provider          only when the job actually needs generation
 ```
 
-Exact text, data, formulas, coordinates, measurements, and mathematical/technical geometry are deterministic by default.
+The optional semantic router is invoked only for low-confidence requests.
 
-## Commands
+## Install now
+
 ```bash
-npm run validate
-npm run list
-npm run route -- "haz un mapa real con coordenadas"
-npm run validate:brief -- examples/poster.json
-npm run select:backend -- examples/selfie-identity.json
-npm run compile -- flux examples/selfie-identity.json
+npm install github:innova-space-edu/visual-design-skills
 ```
 
-See `docs/architecture.md`, `docs/eduai-integration.md`, `docs/authoring-guide.md`, and `docs/runtime-api.md`.
+```js
+import { visual } from "@innova-space/visual-design";
+const plan = visual.plan("Haz una infografía educativa");
+```
+
+## Entry points
+
+- `@innova-space/visual-design` — unified SDK
+- `@innova-space/visual-design/core` — pure browser-safe primitives
+- `@innova-space/visual-design/browser` — cache + gateway client
+- `@innova-space/visual-design/server` — secure generic gateway
+- `@innova-space/visual-design/nextjs` — Route Handler adapter
+- `@innova-space/visual-design/cloudflare` — Worker adapter
+
+The runtime has no external package dependencies.
+
+See `docs/web-sdk.md`, `docs/provider-contract.md`, and `docs/eduai-adapter-contract.md`.

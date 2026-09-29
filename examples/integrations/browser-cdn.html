@@ -1,0 +1,8 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Visual Design SDK</title>
+<script type="module">
+  import { visual } from "https://cdn.jsdelivr.net/gh/innova-space-edu/visual-design-skills@main/packages/sdk/index.js";
+  const plan = visual.plan("Crea una infografía educativa del sistema solar");
+  document.body.innerHTML = "<pre>" + JSON.stringify(plan, null, 2) + "</pre>";
+</script>
