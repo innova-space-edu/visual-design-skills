@@ -25,3 +25,26 @@ const chem=compileBriefToScene({
 assert.ok(chem.nodes.some(function(n){return n.id==="equation";}));
 assert.equal(ENGINE_CAPABILITIES.external_calls,0);
 console.log("visual-engine contract ok");
+
+const dataScene=compileBriefToScene({
+  purpose:"Datos",
+  visual_type:"data-visualization",
+  render_strategy:"deterministic",
+  selected_skills:["data-visualization"],
+  composition:{},
+  data:{values:[3,7,5],labels:["A","B","C"]},
+  output:{format:"svg",width:1200,height:800}
+});
+assert.ok(dataScene.nodes.some(function(n){return n.id==="bar-1";}));
+
+const technical=compileBriefToScene({
+  purpose:"Plano técnico",
+  visual_type:"technical-floorplan",
+  render_strategy:"deterministic",
+  selected_skills:["technical-floorplan"],
+  composition:{},
+  data:{width:620,height:380},
+  output:{format:"svg",width:1200,height:800}
+});
+assert.ok(technical.nodes.some(function(n){return n.id==="plan";}));
+assert.ok(ENGINE_CAPABILITIES.initial_compilers.length>=10);
