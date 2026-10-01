@@ -1,0 +1,15 @@
+{
+  "version":"1.0.0",
+  "tokens":{
+    "space":{"xs":4,"sm":8,"md":16,"lg":24,"xl":32,"2xl":48,"3xl":64},
+    "radius":{"sm":8,"md":14,"lg":22,"xl":30},
+    "typeScale":{"caption":12,"body":16,"bodyLarge":18,"subtitle":22,"title":36,"display":48},
+    "stroke":{"hairline":1,"regular":1.5,"strong":2.5}
+  },
+  "presets":{
+    "educational-clean":{"density":"medium","contrast":"high","grid":8,"titleWeight":780},
+    "scientific-paper":{"density":"high","contrast":"high","grid":4,"titleWeight":700},
+    "technical-blueprint":{"density":"high","contrast":"high","grid":8,"titleWeight":650},
+    "editorial-modern":{"density":"medium","contrast":"high","grid":8,"titleWeight":800}
+  }
+}
