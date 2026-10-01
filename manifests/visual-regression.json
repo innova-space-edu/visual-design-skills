@@ -1,0 +1,23 @@
+{
+  "id": "visual.regression",
+  "category": "learning/regression",
+  "inputs": [
+    "candidate",
+    "golden-cases",
+    "thresholds"
+  ],
+  "outputs": [
+    "visual-regression/1.0"
+  ],
+  "capabilities": [
+    "visual-regression",
+    "quality-v2"
+  ],
+  "version": "1.0.0",
+  "engine": ">=0.2.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "assets": [],
+  "fallbacks": []
+}

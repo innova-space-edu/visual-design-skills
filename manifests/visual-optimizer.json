@@ -1,0 +1,23 @@
+{
+  "id": "visual.optimizer",
+  "category": "learning/optimizer",
+  "inputs": [
+    "observations",
+    "thresholds",
+    "current-version"
+  ],
+  "outputs": [
+    "visual-learning-candidate/1.0"
+  ],
+  "capabilities": [
+    "learning-optimizer",
+    "learning-v2"
+  ],
+  "version": "1.0.0",
+  "engine": ">=0.2.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "assets": [],
+  "fallbacks": []
+}

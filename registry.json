@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.8.0",
   "suite": "visual-design-skills",
   "description": "Specialist visual intelligence skills with progressive disclosure, deterministic/hybrid/generative routing, low-cost prefiltering, and backend-aware quality control.",
   "core": [
@@ -403,6 +403,24 @@
       "path": "skills/advertising-creative/SKILL.md",
       "category": "design/marketing",
       "default_render_strategy": "hybrid"
+    },
+    {
+      "name": "visual-optimizer",
+      "path": "skills/visual-optimizer/SKILL.md",
+      "category": "learning",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "visual-regression",
+      "path": "skills/visual-regression/SKILL.md",
+      "category": "learning",
+      "default_render_strategy": "deterministic"
+    },
+    {
+      "name": "visual-experiment",
+      "path": "skills/visual-experiment/SKILL.md",
+      "category": "learning",
+      "default_render_strategy": "deterministic"
     }
   ],
   "backend_profiles": [
