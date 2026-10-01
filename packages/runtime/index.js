@@ -35,3 +35,5 @@ export async function executeSkill(id,input,options={}){
 }
 
 export * from "./adaptive.js";
+
+export * from "./intelligence.js";

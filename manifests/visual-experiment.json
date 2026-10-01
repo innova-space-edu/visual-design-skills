@@ -1,0 +1,23 @@
+{
+  "id": "visual.experiment",
+  "category": "learning/experiment",
+  "inputs": [
+    "arms",
+    "outcomes",
+    "minimum-samples"
+  ],
+  "outputs": [
+    "visual-experiment/1.0"
+  ],
+  "capabilities": [
+    "visual-experiment",
+    "learning-v2"
+  ],
+  "version": "1.0.0",
+  "engine": ">=0.2.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "assets": [],
+  "fallbacks": []
+}
