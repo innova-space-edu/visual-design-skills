@@ -1,7 +1,7 @@
 {
   "name": "@innova-space/visual-design",
-  "version": "1.5.1",
-  "description": "Local-first visual design routing, planning, provider execution and modular AI design skills.",
+  "version": "1.6.0",
+  "description": "Local-first visual design routing, specialist skills, deterministic scene compilation and optional provider execution.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -24,7 +24,8 @@
     },
     "./nextjs": "./adapters/nextjs/index.js",
     "./cloudflare": "./adapters/cloudflare/index.js",
-    "./registry": "./registry.json"
+    "./registry": "./registry.json",
+    "./engine": "./packages/engine/index.js"
   },
   "files": [
     "packages",
@@ -35,13 +36,14 @@
     "routing",
     "references",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "packages/engine"
   ],
   "engines": {
     "node": ">=18"
   },
   "scripts": {
-    "validate": "npm run lint:skills && npm run validate:examples && npm run validate:evals",
+    "validate": "npm run lint:skills && npm run validate:examples && npm run validate:evals && npm run test:engine-contract",
     "lint:skills": "node scripts/lint-skills.mjs",
     "validate:examples": "node scripts/validate-examples.mjs",
     "validate:evals": "node scripts/validate-evals.mjs",
@@ -57,7 +59,8 @@
     "pack:check": "npm pack --dry-run",
     "build:skill-guidance": "node scripts/build-skill-guidance.mjs",
     "prepare": "npm run build:skill-guidance",
-    "test:skill-guidance": "node scripts/test-skill-guidance.mjs"
+    "test:skill-guidance": "node scripts/test-skill-guidance.mjs",
+    "test:engine-contract": "node scripts/test-engine-contract.mjs"
   },
   "keywords": [
     "ai",
