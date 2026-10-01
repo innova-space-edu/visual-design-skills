@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual Skill Render Plan",
+  "type": "object",
+  "required": ["contract","scene"],
+  "properties": {
+    "contract": {"const":"visual-scene/1.0"},
+    "skill": {"type":"string"},
+    "scene": {"type":"object"},
+    "acceptance": {"type":"array","items":{"type":"string"}},
+    "assets": {"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties": true
+}
