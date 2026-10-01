@@ -1,0 +1,14 @@
+{
+  "id":"math.diagram",
+  "version":"1.0.0",
+  "engine":">=0.1.0",
+  "strategy":"deterministic",
+  "offline":true,
+  "deterministic":true,
+  "category":"education/math",
+  "inputs":["brief","formulae","geometry","style"],
+  "outputs":["visual-scene/1.0"],
+  "assets":["math.axes.cartesian"],
+  "capabilities":["scene-graph","svg-renderer","mathjax-svg","quality-engine"],
+  "fallbacks":[]
+}

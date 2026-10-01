@@ -1,6 +1,6 @@
 {
   "name": "@innova-space/visual-design",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Local-first visual design routing, specialist skills, deterministic scene compilation and optional provider execution.",
   "license": "MIT",
   "type": "module",
@@ -25,7 +25,8 @@
     "./nextjs": "./adapters/nextjs/index.js",
     "./cloudflare": "./adapters/cloudflare/index.js",
     "./registry": "./registry.json",
-    "./engine": "./packages/engine/index.js"
+    "./engine": "./packages/engine/index.js",
+    "./runtime": "./packages/runtime/index.js"
   },
   "files": [
     "packages",
@@ -37,7 +38,8 @@
     "references",
     "LICENSE",
     "README.md",
-    "packages/engine"
+    "packages/engine",
+    "manifests"
   ],
   "engines": {
     "node": ">=18"

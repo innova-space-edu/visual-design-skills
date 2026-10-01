@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://innova-space-edu.cl/schemas/visual-skill.schema.json",
+  "title":"Visual Skill Manifest",
+  "type":"object",
+  "required":["id","version","engine","strategy","offline","deterministic","inputs","outputs"],
+  "properties":{
+    "id":{"type":"string","pattern":"^[a-z0-9]+(?:[._-][a-z0-9]+)+$"},
+    "version":{"type":"string"},
+    "engine":{"type":"string"},
+    "strategy":{"enum":["deterministic","hybrid","generative"]},
+    "offline":{"type":"boolean"},
+    "deterministic":{"type":"boolean"},
+    "category":{"type":"string"},
+    "inputs":{"type":"array","items":{"type":"string"}},
+    "outputs":{"type":"array","items":{"type":"string"}},
+    "assets":{"type":"array","items":{"type":"string"}},
+    "capabilities":{"type":"array","items":{"type":"string"}},
+    "fallbacks":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":true
+}
