@@ -1,3 +1,4 @@
+import { compileV4Scene } from "./v4.js";
 const COLORS={
   ink:"#0f172a",muted:"#64748b",line:"#cbd5e1",blue:"#2563eb",blueSoft:"#dbeafe",
   violet:"#7c3aed",violetSoft:"#ede9fe",green:"#059669",greenSoft:"#d1fae5",orange:"#ea580c",orangeSoft:"#ffedd5"
@@ -240,6 +241,7 @@ export function compileBriefToScene(brief){
   if(brief.context&&brief.context.engine_scene)return structuredClone(brief.context.engine_scene);
   const selected=brief.selected_skills||[];
   const type=String(brief.visual_type||"");
+  const v4=compileV4Scene(brief); if(v4)return v4;
   if(selected.includes("math-diagram")||type==="math-diagram")return compileMath(brief);
   if(selected.includes("chemistry-diagram")||type==="chemistry-diagram")return compileChemistry(brief);
   if(selected.includes("flowchart-diagram")||type==="flowchart-diagram")return compileFlowchart(brief);
@@ -263,5 +265,5 @@ export const ENGINE_CAPABILITIES={
   local_first:true,
   external_calls:0,
   deterministic_skills:["math-diagram","chemistry-diagram","flowchart-diagram","data-visualization","technical-drawing","technical-floorplan","worksheet-design","logo-design","icon-design","vector-illustration"],
-  initial_compilers:["math-diagram","chemistry-diagram","flowchart-diagram","data-visualization","physics-diagram","technical-drawing","technical-floorplan","timeline-design","worksheet-design","logo-design","icon-design","vector-illustration","infographic","educational-image"]
+  initial_compilers:["math-diagram","chemistry-diagram","flowchart-diagram","data-visualization","physics-diagram","biology-diagram","map-design","technical-drawing","technical-floorplan","timeline-design","worksheet-design","textbook-page","presentation-visual","ui-visual-design","poster-design","logo-design","icon-design","vector-illustration","infographic","educational-image"]
 };

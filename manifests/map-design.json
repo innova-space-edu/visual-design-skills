@@ -1,0 +1,28 @@
+{
+  "id": "map.design",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "geospatial",
+  "inputs": [
+    "brief",
+    "coordinates",
+    "labels",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "map.pin",
+    "map.grid"
+  ],
+  "capabilities": [
+    "map-design",
+    "layout-v2",
+    "text-layout"
+  ],
+  "fallbacks": []
+}

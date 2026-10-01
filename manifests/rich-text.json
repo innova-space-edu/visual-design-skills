@@ -1,0 +1,25 @@
+{
+  "id": "rich.text",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "text/editorial",
+  "inputs": [
+    "paragraphs",
+    "runs",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "typography.scale.default"
+  ],
+  "capabilities": [
+    "rich-content",
+    "text-layout"
+  ],
+  "fallbacks": []
+}

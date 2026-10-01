@@ -33,3 +33,5 @@ export async function executeSkill(id,input,options={}){
     offline:!!record.manifest.offline
   };
 }
+
+export * from "./adaptive.js";

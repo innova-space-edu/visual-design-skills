@@ -1,0 +1,27 @@
+{
+  "id": "biology.diagram",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "education/biology",
+  "inputs": [
+    "brief",
+    "labels",
+    "structures",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "science.cell.basic"
+  ],
+  "capabilities": [
+    "biology-diagram",
+    "text-layout",
+    "quality-v2"
+  ],
+  "fallbacks": []
+}

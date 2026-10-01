@@ -1,0 +1,26 @@
+{
+  "id": "document.layout",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "editorial/document",
+  "inputs": [
+    "pages",
+    "sections",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "layout.page.document"
+  ],
+  "capabilities": [
+    "document-pages",
+    "rich-content",
+    "layout-v2"
+  ],
+  "fallbacks": []
+}

@@ -1,0 +1,26 @@
+{
+  "id": "image.editing",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "image/edit",
+  "inputs": [
+    "image",
+    "crop",
+    "filters",
+    "annotations"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "image.adjustments"
+  ],
+  "capabilities": [
+    "editor-v4",
+    "rich-content"
+  ],
+  "fallbacks": []
+}

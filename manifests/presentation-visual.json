@@ -1,0 +1,28 @@
+{
+  "id": "presentation.visual",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "editorial/presentation",
+  "inputs": [
+    "brief",
+    "title",
+    "sections",
+    "data",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "layout.slide.title-content"
+  ],
+  "capabilities": [
+    "layout-v2",
+    "text-layout",
+    "charts-v2"
+  ],
+  "fallbacks": []
+}

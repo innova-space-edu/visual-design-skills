@@ -1,0 +1,27 @@
+{
+  "id": "diagram.connectors",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "diagram",
+  "inputs": [
+    "nodes",
+    "edges",
+    "labels",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "diagram.connector.orthogonal"
+  ],
+  "capabilities": [
+    "editor-v4",
+    "rich-content",
+    "layout-v2"
+  ],
+  "fallbacks": []
+}
