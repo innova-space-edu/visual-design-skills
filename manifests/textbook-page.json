@@ -1,0 +1,27 @@
+{
+  "id": "textbook.page",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "education/editorial",
+  "inputs": [
+    "brief",
+    "sections",
+    "examples",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "layout.page.educational"
+  ],
+  "capabilities": [
+    "layout-v2",
+    "text-layout",
+    "rich-content"
+  ],
+  "fallbacks": []
+}
