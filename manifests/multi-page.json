@@ -1,0 +1,26 @@
+{
+  "id": "document.multi-page",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "document",
+  "inputs": [
+    "pages",
+    "master",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "layout.page.document"
+  ],
+  "capabilities": [
+    "document-pages",
+    "layout-v2",
+    "rich-content"
+  ],
+  "fallbacks": []
+}
