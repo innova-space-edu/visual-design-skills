@@ -1,0 +1,14 @@
+{
+  "id":"science.diagram",
+  "version":"1.0.0",
+  "engine":">=0.1.0",
+  "strategy":"deterministic",
+  "offline":true,
+  "deterministic":true,
+  "category":"education/science",
+  "inputs":["brief","domain","entities","relationships","labels","style"],
+  "outputs":["visual-scene/1.0"],
+  "assets":["physics.vector.force","physics.optics.thin-lens","chemistry.atom.bohr","biology.cell.generic"],
+  "capabilities":["scene-graph","svg-renderer","mathjax-svg","quality-engine"],
+  "fallbacks":[]
+}
