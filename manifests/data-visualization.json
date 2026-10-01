@@ -1,0 +1,14 @@
+{
+  "id":"data.visualization",
+  "version":"1.0.0",
+  "engine":">=0.1.0",
+  "strategy":"deterministic",
+  "offline":true,
+  "deterministic":true,
+  "category":"data/charts",
+  "inputs":["brief","series","labels","scales","style"],
+  "outputs":["visual-scene/1.0"],
+  "assets":["layout.grid.infographic"],
+  "capabilities":["charts-v2","text-layout","quality-v2"],
+  "fallbacks":[]
+}
