@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
+  "version": "1.6.0",
   "suite": "visual-design-skills",
   "description": "Specialist visual intelligence skills with progressive disclosure, deterministic/hybrid/generative routing, low-cost prefiltering, and backend-aware quality control.",
   "core": [
@@ -406,6 +406,7 @@
     }
   ],
   "backend_profiles": [
+    "visual-engine",
     "openai",
     "flux",
     "qwen-image",
@@ -436,5 +437,12 @@
     "cloudflare_adapter": "adapters/cloudflare/index.js",
     "planning_provider_calls": 0,
     "semantic_fallback": "optional-low-confidence-only"
+  },
+  "execution_engine": {
+    "contract": "visual-scene/1.0",
+    "compiler": "packages/engine/index.js",
+    "backend_reference": "references/backends/visual-engine.md",
+    "local_first": true,
+    "external_calls": 0
   }
 }
