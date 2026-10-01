@@ -1,0 +1,26 @@
+{
+  "id": "table.design",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "data/table",
+  "inputs": [
+    "cells",
+    "headers",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "layout.table.basic"
+  ],
+  "capabilities": [
+    "rich-content",
+    "text-layout",
+    "quality-v2"
+  ],
+  "fallbacks": []
+}
