@@ -1,0 +1,14 @@
+{
+  "id":"technical.diagram",
+  "version":"1.0.0",
+  "engine":">=0.1.0",
+  "strategy":"deterministic",
+  "offline":true,
+  "deterministic":true,
+  "category":"technical/engineering",
+  "inputs":["brief","dimensions","geometry","labels","style"],
+  "outputs":["visual-scene/1.0"],
+  "assets":["diagram.connector.orthogonal"],
+  "capabilities":["geometry-v2","layout-v2","text-layout","quality-v2"],
+  "fallbacks":[]
+}
