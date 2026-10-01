@@ -1,0 +1,28 @@
+{
+  "id": "poster.design",
+  "version": "1.0.0",
+  "engine": ">=0.1.0",
+  "strategy": "deterministic",
+  "offline": true,
+  "deterministic": true,
+  "category": "design/poster",
+  "inputs": [
+    "brief",
+    "headline",
+    "body",
+    "cta",
+    "style"
+  ],
+  "outputs": [
+    "visual-scene/1.0"
+  ],
+  "assets": [
+    "layout.poster.hero"
+  ],
+  "capabilities": [
+    "layout-v2",
+    "text-layout",
+    "quality-v2"
+  ],
+  "fallbacks": []
+}
