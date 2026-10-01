@@ -118,6 +118,112 @@ function compileInfographic(brief){
   s.nodes.push(text("footer",64,h-36,"Visual Engine structured render",14,500,COLORS.muted));
   return s;
 }
+function compileDataVisualization(brief){
+  const s=sceneBase(brief),w=s.width,h=s.height,data=brief.data||{};
+  s.nodes.push(text("title",64,72,titleFrom(brief),40,750));
+  const values=Array.isArray(data.values)&&data.values.length?data.values.map(Number):[12,28,19,36,24];
+  const labels=Array.isArray(data.labels)?data.labels:values.map(function(_,i){return "D"+(i+1);});
+  const left=90,top=150,cw=w-170,ch=h-260,max=Math.max.apply(null,[1].concat(values));
+  s.nodes.push(line("axis-y",left,top,left,top+ch,false));
+  s.nodes.push(line("axis-x",left,top+ch,left+cw,top+ch,false));
+  const gap=18,bw=(cw-gap*(values.length+1))/values.length;
+  values.forEach(function(v,i){
+    const bh=ch*(v/max),x=left+gap+i*(bw+gap),y=top+ch-bh;
+    s.nodes.push(rect("bar-"+i,x,y,bw,bh,COLORS.blueSoft,COLORS.blue,8));
+    s.nodes.push(text("value-"+i,x+bw/2-10,y-10,String(v),15,700,COLORS.blue));
+    s.nodes.push(text("label-"+i,x+bw/2-12,top+ch+30,String(labels[i]||""),14,500,COLORS.muted));
+  });
+  return s;
+}
+function compilePhysics(brief){
+  const s=sceneBase(brief),w=s.width,h=s.height,data=brief.data||{};
+  s.nodes.push(text("title",64,72,titleFrom(brief),40,750));
+  const optics=String(data.mode||brief.purpose||"").toLowerCase().includes("optic");
+  if(optics){
+    const cy=h/2,lx=w/2;
+    s.nodes.push(line("principal-axis",70,cy,w-70,cy,false));
+    s.nodes.push({id:"lens",type:"path",d:"M "+(lx-26)+" "+(cy-150)+" Q "+(lx+25)+" "+cy+" "+(lx-26)+" "+(cy+150)+" Q "+(lx-75)+" "+cy+" "+(lx-26)+" "+(cy-150),paint:{fill:"#dbeafe",stroke:"#2563eb",strokeWidth:3}});
+    s.nodes.push(line("ray-1",130,cy-90,lx-26,cy-40,false));
+    s.nodes.push(line("ray-2",lx-26,cy-40,w-130,cy+70,true));
+    s.nodes.push(line("ray-3",130,cy-90,w-130,cy+90,true));
+    s.nodes.push(text("lens-label",lx-58,cy+190,"Lente / sistema óptico",16,650,COLORS.blue));
+  }else{
+    const x=w/2-90,y=h/2-70;
+    s.nodes.push(rect("body",x,y,180,140,"#ffffff","#334155",18));
+    s.nodes.push(text("body-label",x+58,y+78,String(data.object||"Objeto"),19,700));
+    const forces=Array.isArray(data.forces)&&data.forces.length?data.forces:[
+      {label:"N",dx:0,dy:-170},{label:"P",dx:0,dy:170},{label:"F",dx:190,dy:0}
+    ];
+    forces.forEach(function(force,i){
+      const cx=x+90,cy=y+70,ex=cx+Number(force.dx||0),ey=cy+Number(force.dy||0);
+      s.nodes.push(line("force-"+i,cx,cy,ex,ey,true));
+      s.nodes.push(text("force-label-"+i,ex+8,ey-8,String(force.label||"F"),18,750,COLORS.orange));
+    });
+  }
+  return s;
+}
+function compileTechnical(brief){
+  const s=sceneBase(brief),w=s.width,h=s.height,data=brief.data||{};
+  s.nodes.push(text("title",50,58,titleFrom(brief),32,750));
+  const x=130,y=150,rw=Number(data.width)||Math.round(w*.55),rh=Number(data.height)||Math.round(h*.52);
+  s.nodes.push(rect("plan",x,y,rw,rh,"#ffffff","#111827",0));
+  if(Array.isArray(data.divisions)){
+    data.divisions.forEach(function(d,i){
+      if(d.orientation==="v")s.nodes.push(line("division-"+i,x+Number(d.at||0),y,x+Number(d.at||0),y+rh,false));
+      else s.nodes.push(line("division-"+i,x,y+Number(d.at||0),x+rw,y+Number(d.at||0),false));
+    });
+  }else{
+    s.nodes.push(line("division-a",x+rw*.58,y,x+rw*.58,y+rh,false));
+    s.nodes.push(line("division-b",x,y+rh*.55,x+rw*.58,y+rh*.55,false));
+  }
+  s.nodes.push(line("dim-top",x,y-38,x+rw,y-38,true));
+  s.nodes.push(text("dim-top-label",x+rw/2-35,y-52,String(data.widthLabel||rw+" u"),14,650,COLORS.muted));
+  s.nodes.push(line("dim-left",x-38,y,x-38,y+rh,true));
+  s.nodes.push(text("dim-left-label",x-80,y+rh/2,String(data.heightLabel||rh+" u"),14,650,COLORS.muted));
+  s.nodes.push(text("note",x+rw+55,y+30,"Cotas y geometría\neditables / medibles",16,600,COLORS.blue));
+  return s;
+}
+function compileTimeline(brief){
+  const s=sceneBase(brief),w=s.width,data=brief.data||{};
+  s.nodes.push(text("title",64,72,titleFrom(brief),40,750));
+  const events=Array.isArray(data.events)&&data.events.length?data.events:[
+    {date:"Fase 1",label:"Definir"},{date:"Fase 2",label:"Construir"},{date:"Fase 3",label:"Validar"},{date:"Fase 4",label:"Publicar"}
+  ];
+  const y=360,left=100,right=w-100;
+  s.nodes.push(line("timeline",left,y,right,y,true));
+  events.forEach(function(e,i){
+    const x=events.length===1?w/2:left+i*(right-left)/(events.length-1);
+    s.nodes.push({id:"dot-"+i,type:"circle",cx:x,cy:y,r:10,paint:{fill:COLORS.violet,stroke:"#ffffff",strokeWidth:3}});
+    s.nodes.push(text("date-"+i,x-32,y-35,String(e.date||""),14,750,COLORS.violet));
+    s.nodes.push(text("event-"+i,x-48,y+48,String(e.label||""),16,600));
+  });
+  return s;
+}
+function compileWorksheet(brief){
+  const s=sceneBase(brief),w=s.width,h=s.height,data=brief.data||{};
+  s.background="#ffffff";
+  s.nodes.push(text("title",56,64,titleFrom(brief),34,780));
+  s.nodes.push(line("header-line",56,88,w-56,88,false));
+  const items=Array.isArray(data.items)&&data.items.length?data.items:[
+    "1. Identifica los datos relevantes.","2. Representa el problema.","3. Calcula y justifica el resultado.","4. Verifica tu respuesta."
+  ];
+  items.forEach(function(item,i){
+    const y=150+i*125;
+    s.nodes.push(text("q-"+i,68,y,String(item),18,600));
+    for(let j=0;j<3;j++)s.nodes.push({id:"rule-"+i+"-"+j,type:"line",x1:80,y1:y+34+j*25,x2:w-80,y2:y+34+j*25,paint:{stroke:"#cbd5e1",strokeWidth:1}});
+  });
+  s.nodes.push(text("footer",56,h-35,"Visual Engine worksheet",12,500,COLORS.muted));
+  return s;
+}
+function compileVectorMark(brief){
+  const s=sceneBase(brief),w=s.width,h=s.height;
+  s.nodes.push(text("title",64,72,titleFrom(brief),32,700));
+  const cx=w/2,cy=h/2;
+  s.nodes.push({id:"mark-a",type:"circle",cx:cx-55,cy:cy,r:105,paint:{fill:COLORS.blueSoft,stroke:COLORS.blue,strokeWidth:8}});
+  s.nodes.push({id:"mark-b",type:"polygon",points:[[cx+5,cy-110],[cx+120,cy],[cx+5,cy+110]],paint:{fill:COLORS.violetSoft,stroke:COLORS.violet,strokeWidth:8}});
+  s.nodes.push(text("mark-label",cx-125,cy+185,String((brief.data&&brief.data.label)||"VECTOR MARK"),24,800));
+  return s;
+}
 function compileGeneric(brief){
   const s=sceneBase(brief),w=s.width;
   s.nodes.push(text("title",64,78,titleFrom(brief),42,780));
@@ -137,6 +243,12 @@ export function compileBriefToScene(brief){
   if(selected.includes("math-diagram")||type==="math-diagram")return compileMath(brief);
   if(selected.includes("chemistry-diagram")||type==="chemistry-diagram")return compileChemistry(brief);
   if(selected.includes("flowchart-diagram")||type==="flowchart-diagram")return compileFlowchart(brief);
+  if(selected.includes("data-visualization")||type==="data-visualization")return compileDataVisualization(brief);
+  if(selected.includes("physics-diagram")||type==="physics-diagram")return compilePhysics(brief);
+  if(selected.includes("technical-drawing")||selected.includes("technical-floorplan")||type==="technical-drawing"||type==="technical-floorplan")return compileTechnical(brief);
+  if(selected.includes("timeline-design")||type==="timeline")return compileTimeline(brief);
+  if(selected.includes("worksheet-design")||type==="worksheet")return compileWorksheet(brief);
+  if(selected.includes("logo-design")||selected.includes("icon-design")||selected.includes("vector-illustration"))return compileVectorMark(brief);
   if(selected.includes("infographic")||type==="infographic"||selected.includes("educational-image"))return compileInfographic(brief);
   return compileGeneric(brief);
 }
@@ -151,5 +263,5 @@ export const ENGINE_CAPABILITIES={
   local_first:true,
   external_calls:0,
   deterministic_skills:["math-diagram","chemistry-diagram","flowchart-diagram","data-visualization","technical-drawing","technical-floorplan","worksheet-design","logo-design","icon-design","vector-illustration"],
-  initial_compilers:["math-diagram","chemistry-diagram","flowchart-diagram","infographic","educational-image"]
+  initial_compilers:["math-diagram","chemistry-diagram","flowchart-diagram","data-visualization","physics-diagram","technical-drawing","technical-floorplan","timeline-design","worksheet-design","logo-design","icon-design","vector-illustration","infographic","educational-image"]
 };
